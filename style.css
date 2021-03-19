@@ -1,0 +1,925 @@
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("font/OpenSans-Regular.ttf")
+    format("truetype");
+}
+
+.s-html, .s-body{
+    margin: 0;
+    font-family: OpenSans-Regular, Arial, sans-serif;
+    font-size: 16px;
+    color: #363636;
+    width: 100%;
+}
+
+.s-main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.s-header {
+    width: 100%;
+    height: 60px;
+    background-color: #494849;
+    top: 0;
+    flex-grow: 0;
+    z-index: 100;
+}
+
+.s-navItem > a, .s-logo > a, .s-accountButtonHolder a, .s-footer a, #s-mobileMenu a{
+    color: white;
+    text-decoration: none;
+}
+
+.s-navItem > a:hover, .s-accountButtonHolder a:hover, .s-footer a:hover{
+    text-decoration: underline;
+}
+
+.s-accountButton {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+    height: 100%;
+}
+
+.s-accountButtonHolder {
+    background-color: #6ac8d9;
+    height: 73px;
+    z-index: 1;
+    width: 280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.s-accountButtonImageContainer{
+    display: flex;
+    align-items: center;
+}
+
+.s-accountText{
+    font-size: 1.7rem;
+}
+
+.s-loginText{
+    font-size: 0.7rem;
+    color: white;
+}
+
+.s-accountButtonTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8px;
+}
+
+.s-accountButtonHolder > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.s-userImage{
+    width: 50px;
+    height: auto;
+}
+
+.s-logo{
+    padding-left: 60px;
+    text-decoration: none;
+}
+
+.s-logo > a{
+    color: #6ac8d9;
+    font-size: 2rem;
+}
+
+.s-content{
+    flex-grow: 1;
+    background-color: #f3f2f3;
+    width: 100%;
+}
+
+.s-headerLinkBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.s-footer {
+    height: 110px;
+    background-color: #363636;
+    width: 100%;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.s-footerContentBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 110px 0 110px;
+    align-items: flex-end;
+    color: white;
+}
+
+#s-desktopMenu{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s-socialMediaImageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.s-socialMediaImageContainer img{
+    width: 30px;
+}
+
+#s-burgerMenuButton {
+    display: none;
+    cursor: pointer;
+    border: 2px solid #6ac8d9;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 4px 6px 3px 6px;
+    margin-right: 10px;
+}
+
+#s-mobileMenu{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 0;
+    background-color: #363636;
+    z-index: 1;
+    top: 60px;
+    overflow: hidden;
+    font-size: 1.5em;
+    transition: height .3s ease-in-out;
+}
+
+#s-mobileMenu ul li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-bottom: 2px solid white;
+    margin: 4% 21% 0 21%;
+}
+
+#s-mobileMenu ul{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#s-mobileMenu a{
+    text-align: center;
+}
+
+.s-mobileMenuAccountContainer{
+    background-color: #6ac8d9;
+    margin: 5% 0 0 0!important;
+    border-bottom: 0!important;
+    padding: 8% 0 8% 0;
+}
+
+.s-mobileMenuAccountContainer > a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.s-userImageMobile{
+    margin-right: 20px;
+    width: 50px;
+    height: auto;
+}
+
+.s-closingButton {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #6ac8d9;
+    padding: 0 9px 0 9px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.s-closingButtonContainer{
+    border: 0!important;
+}
+
+.s-arrowImage{
+    width: 35px;
+}
+
+#s-burgerMenuImage{
+    width: 35px;
+}
+
+.s-arrowRightImage {
+    width: 15px;
+    display: block;
+}
+
+.s-arrowRightImageContainer {
+    width: 15px;
+    height: 15px;
+    right: 0;
+    position: absolute;
+    top: 5px;
+    border: 2px solid #6ac8d9;
+    border-radius: 3px;
+    padding: 2px 0 2px 0;
+}
+
+.s-mobileProductContainer{
+    position: relative;
+    cursor: pointer;
+}
+
+#s-doubleMenuContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%; /*200%*/
+    left: 0;
+    transition: left 400ms cubic-bezier(.77,0,.18,1) 75ms;
+}
+
+.s-arrowLeftImageContainer{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #6ac8d9;
+    border-radius: 3px;
+    padding: 2px 0 2px 0;
+    cursor: pointer;
+}
+
+.s-backSwitchContainer {
+    border-bottom: 0 !important;
+    display: flex;
+    justify-content: flex-start !important;
+    margin: 9% 21% 0 15% !important;
+}
+
+.s-categoryImg{
+    width: 90px;
+}
+
+.s-categoryImgContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.s-categoryImgTextHolder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.s-categoryImgTextHolder > div {
+    border-bottom: 2px solid white;
+    width: 130px;
+}
+
+.s-mobileCategoryContainer{
+    border: none!important;
+    margin: 5% 17% 0 17%!important;
+}
+
+.s-breadcrumbs {
+    color: #363636;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+.s-breadcrumbText {
+    border: 3px dashed #64bbca;
+    padding: 5px 9px 5px 9px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.s-breadcrumbText > div {
+    flex-direction: row;
+    display: flex;
+}
+
+.s-breadcrumbText span {
+    text-decoration: underline;
+}
+
+.s-breadcrumbText a{
+    text-decoration: none;
+    color: #363636;
+}
+
+.s-breadcrumbText a:hover{
+    text-decoration: underline;
+}
+
+.s-breadCrumbArrow{
+    margin: 0 10px 0 10px;
+}
+
+#s-firstBreadCrumbArrow{
+    display: none;
+}
+
+.s-pageHeading {
+    width: 100%;
+    color: #363636;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: linear-gradient(to right, #363636 100%, transparent 100%);
+    background-position: 0 50%;
+    background-repeat: repeat-x;
+    background-size: 100% 4px;
+    margin: 100px 0 100px 0;
+}
+
+.s-pageTitle {
+    margin: 0;
+    background-color: #f3f2f3;
+    padding: 0 40px 0 40px;
+}
+
+.c-entryBox {
+    display: flex;
+    margin: 0 30px 100px 30px;
+}
+
+.c-entryDetails {
+    flex: 1;
+    color: white;
+    background-color: #494849;
+    padding: 17px 20px 17px 20px;
+    border: 2px solid #494849;
+    border-radius: 3px 0 0 5px;
+}
+
+.c-entryText {
+    flex: 5;
+    background-color: #9e9e9e;
+    color: black;
+    border: 2px solid #9e9e9e;
+    border-radius: 0 5px 5px 0;
+    padding: 30px 27px 30px 27px;
+}
+
+.c-userName {
+    color: #6ac8d9;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.c-date{
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.c-time{
+    font-size: 0.8rem;
+}
+
+.c-profilePicture {
+    border: 2px solid #6ac8d9;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 600px){
+    .c-entryBox {
+        flex-direction: column;
+    }
+
+    .c-entryDetails {
+       text-align: center;
+    }
+
+    .c-entryDetails {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .c-entryText {
+        border-radius: 0 0 5px 5px;
+        padding: 15px;
+    }
+}
+
+.login-c-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.login-c-visibilityButton {
+    position: absolute;
+    right: 7px;
+    width: 20px;
+    height: auto;
+    top: 4px;
+    cursor: pointer;
+}
+
+.login-c-label{
+    margin-bottom: 2px;
+}
+
+.login-c-input {
+    padding: 3px 7px;
+    border-radius: 3px;
+    border: 1px solid #a6a6a6;
+    margin-bottom: 30px;
+    height: 20px;
+}
+
+.login-c-input:focus {
+    box-shadow: 0 0 5px rgb(106, 200, 217);
+}
+
+.login-c-pwdInputContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-c-loginButton{
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #64bbca;
+    color: #363636;
+    padding: 11px;
+    border: none;
+    border-radius: 4px;
+}
+
+
+.account-hiddenSettings-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 130px;
+    justify-content: space-evenly;
+    background-color: #f3f2f3;
+    overflow-y: hidden;
+}
+
+.account-buttons{
+    font-size: 1rem;
+    padding: 8px;
+}
+
+
+.account-hiddenSettings {
+    margin-top: 30px;
+    height: 3px;
+    overflow-y: hidden;
+    transition: height .3s ease-in-out;
+}
+
+label[for="deleteAccountButton"]{
+    pointer-events: none;
+}
+
+.account-pwdInput {
+    margin-bottom: 0;
+    margin-left: 7px;
+}
+
+.account-pwdInputContainer{
+    flex-direction: row;
+}
+
+.login-c-loginButton:hover {
+    background: #494849;
+    color: #64bbca;
+}
+
+.login-c-registerText {
+    text-align: center;
+    margin: 20px 0 100px 0;
+}
+
+.login-c-registerText a {
+    color: #64bbca;
+}
+
+.account-box {
+    border: 1px solid #c5c5c5;
+    max-width: 450px;
+    margin: 0 auto 100px auto;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.entry-entryPostButton{
+    display: block;
+    margin: 27px auto 0 auto;
+}
+
+
+.mce-container{
+    max-width: 600px!important;
+    margin: 0 auto!important;
+}
+
+.mce-branding{
+    display: none!important;
+}
+
+.mce-notification.mce-has-close{
+    display: none!important;
+}
+
+
+.account-box-child-containers {
+    display: flex;
+    margin: 20px 20px 55px 20px;
+    flex-direction: column;
+}
+
+.account-imageWrapper{
+    display: flex;
+}
+
+.account-picture-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-lastBox{
+    justify-content: center;
+}
+
+.account-box-child-containers:last-child {
+    margin-bottom: 20px;
+}
+
+#chosenMenuItem{
+    text-decoration: underline;
+}
+
+#chosenMenuItemMobileMenu{
+    color: #6ac8d9!important;
+}
+
+.register-errorBox{
+    margin-bottom: 20px;
+    color: #bd0000;
+}
+
+.logoutButton{
+    background: none;
+    color: white;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.logoutButton:hover{
+    text-decoration: underline;
+}
+
+.logoutButton-mobile:hover{
+    text-decoration: none;
+}
+
+.account-is-chosen{
+    text-decoration: underline;
+}
+
+.account-helloContainer{
+    text-align: center;
+    margin-bottom: 9px;
+    font-size: 1.3rem;
+}
+
+.c-welcomeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.c-welcomeContainer-headline {
+    font-size: 3rem;
+    font-family: inherit;
+    color: #000;
+    text-shadow: 1px 1px 2px #b3b3b3;
+}
+
+.c-welcomeContainer-subtitle {
+    color: #363636;
+    font-size: 1.1rem;
+    margin-top: 13px;
+}
+
+
+
+.entry-errorbox{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.account-errorBox{
+    margin-bottom: 0;
+}
+
+
+
+.popup-holder {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+    align-items: center;
+    background-color: rgba(72, 71, 72, 0.5);
+}
+
+.popup-box {
+
+    color: black;
+    background-color: white;
+    border-radius: 11px;
+    box-shadow: 5px 6px 9px grey;
+    border: 1px solid lightgrey;
+    width: 480px;
+}
+
+.popup-box h1 {
+    margin: 7px 0 7px 0;
+    border-bottom: 1px solid grey;
+    padding: 5px 0 10px 15px;
+}
+
+
+
+.popup-box h1 + div {
+    padding-left: 15px;
+    line-height: 1.4em;
+}
+
+.popup-box div:last-child {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 11px 0;
+}
+
+.popup-box div:last-child button{
+
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #a6a6a6;
+    cursor: pointer;
+    transition: box-shadow .3s ease-in-out;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1000px){
+
+    #s-mobileMenu{
+        height: 0 !important;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1000px) and (min-width: 480px){
+
+
+    .s-navItem{
+        display: none;
+    }
+
+    #s-burgerMenuButton{
+        display: block;
+    }
+
+    .s-header{
+        position: fixed;
+    }
+
+    .s-footerContentBox {
+        padding: 0;
+    }
+
+    .s-logo {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .s-accountButton {
+        padding-right: 30px;
+    }
+
+    .s-accountButtonHolder {
+        height: 68px;
+        width: 190px;
+    }
+
+    .s-userImage {
+        width: 35px;
+    }
+
+    .s-footer {
+        height: 234px;
+    }
+
+    .s-footerContentBox{
+        width: 86%;
+        height: 74%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .s-footerContentBox > div {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .s-socialMediaContainer {
+        flex-direction: column !important;
+    }
+
+    .s-socialMediaImageContainer {
+        width: 95px;
+    }
+
+
+    .s-breadcrumbs{
+        margin-top: 129px;
+    }
+
+
+    .s-pageHeading {
+        margin-bottom: 60px;
+    }
+
+    .s-pageTitle{
+        font-size: 1.6rem;
+        padding: 0 15px 0 15px;
+    }
+
+    #s-mobileMenu{
+        font-size: 2rem;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 480px){
+
+    .s-navItem{
+        display: none;
+    }
+
+    #s-burgerMenuButton{
+        display: block;
+    }
+
+    .s-header{
+        position: fixed;
+    }
+
+    .s-footerContentBox {
+        padding: 0;
+    }
+
+    .s-logo {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .s-accountButton {
+        padding-right: 30px;
+    }
+
+    .s-accountButtonHolder {
+        height: 68px;
+        width: 190px;
+    }
+
+    .s-userImage {
+        width: 35px;
+    }
+
+    .s-footer {
+        height: 234px;
+    }
+
+    .s-footerContentBox{
+        width: 86%;
+        height: 74%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .s-footerContentBox > div {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .s-socialMediaContainer {
+        flex-direction: column !important;
+    }
+
+    .s-socialMediaImageContainer {
+        width: 95px;
+    }
+
+
+    .s-breadcrumbs{
+        margin-top: 129px;
+    }
+
+    .s-breadcrumbText{
+        flex-direction: column;
+    }
+
+    #s-firstBreadCrumbArrow{
+        display: block;
+    }
+
+    .s-pageHeading {
+        margin-bottom: 60px;
+    }
+
+    .s-pageTitle{
+        font-size: 1.6rem;
+        padding: 0 15px 0 15px;
+    }
+
+
+    #s-mobileMenu ul li {
+        margin: 4% 13% 0 13%;
+    }
+
+    #s-mobileMenu{
+        font-size: 1.3rem;
+    }
+
+
+    .popup-box {
+
+        width: 280px;
+
+    }
+}
